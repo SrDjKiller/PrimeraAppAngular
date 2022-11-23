@@ -6,6 +6,14 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { DashboardComponent } from './dashboard.component';
 import { EditarEntradaComponent } from '../editar-entrada/editar-entrada.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon'
+
+
 @NgModule({
   declarations: [DashboardComponent, EditarEntradaComponent],
   imports: [
@@ -14,7 +22,14 @@ import { EditarEntradaComponent } from '../editar-entrada/editar-entrada.compone
       { path: '', component: DashboardComponent},
       { path: 'editar-entrada/:id', component: EditarEntradaComponent}
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule
+
   ]
 })
 export class DashboardModule { }

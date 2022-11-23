@@ -52,3 +52,11 @@ Para arreglarlo: Hay que definir en el constructor todo lo que vayamos a sacar p
 
 ////////////////////////////////////////////////////////////////////////////////
 
+NOT SUPPORTED: keyword "id", use "$id" for schema ID
+
+ERROR EN LA INSTALACION DE MATERIAL:
+
+Solucion: Añadir la version de forma manual, si no te va a salir el error, automaticamente instala
+la version 7.0.0 y da error, en este caso e añadido la version 13.0.0 y funciona correctamente.
+
+////////////////////////////////////////////////////////////////////////////////

@@ -14,6 +14,7 @@ import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-
 import { EspejoPipe } from './shared/pipes/espejo.pipe';
 import { FrontComponent } from './views/front/front.component';
 import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entr
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
