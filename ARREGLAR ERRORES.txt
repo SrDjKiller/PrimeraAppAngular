@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+
+error ng8002 can't bind to 'formgroup' since it isn't a known property of 'form' angular 14 -- Para arreglar el error:
+
+- Hay que añadir, en este caso en dashboard.module.ts lo siguiente:
+
+import { ReactiveFormsModule } from '@angular/forms'
+
+- Y en la parte imports:
+
+ReactiveFormsModule
+
+////////////////////////////////////////////////////////////////////////////////
+
+Property 'id' comes from an index signature, so it must be accessed with ['id']. -- Para arreglarlo:
+
+usar ['id'] en lugar del .id
+
+////////////////////////////////////////////////////////////////////////////////
+
+Property 'entradaService' does not exist on type 'EditarEntradaComponent'. -- Para arreglarlo:
+
+- Hay que añadirlo al constructor, si no no funciona, se añade mediante:
+
+private entradaService: EntradaService
+
+////////////////////////////////////////////////////////////////////////////////
+
+Property 'id' has no initializer and is not definitely assigned in the constructor. -- Para arreglarlo:
+
+- Hay que darle un valor dentro del constructor, por ejemplo:
+
+this.id = 0;
+
+////////////////////////////////////////////////////////////////////////////////
+
+ERROR EN LA CONSOLA DE GOOGLE:
+
+ERROR TypeError: Cannot read properties of undefined (reading 'title')
+    at DetallesEntradaComponent_Template (detalles-entrada.component.html:2:7)
+    at executeTemplate (core.mjs:12084:9)
+    at refreshView (core.mjs:11969:13)
+    at refreshComponent (core.mjs:13043:13)
+    at refreshChildComponents (core.mjs:11759:9)
+    at refreshView (core.mjs:12019:13)
+    at refreshEmbeddedViews (core.mjs:12997:17)
+    at refreshView (core.mjs:11993:9)
+    at refreshComponent (core.mjs:13043:13)
+    at refreshChildComponents (core.mjs:11759:9)
+
+Para arreglarlo: Hay que definir en el constructor todo lo que vayamos a sacar por pantalla.
+
+////////////////////////////////////////////////////////////////////////////////
+
+NOT SUPPORTED: keyword "id", use "$id" for schema ID
+
+ERROR EN LA INSTALACION DE MATERIAL:
+
+Solucion: Añadir la version de forma manual, si no te va a salir el error, automaticamente instala
+la version 7.0.0 y da error, en este caso e añadido la version 13.0.0 y funciona correctamente.
+
+////////////////////////////////////////////////////////////////////////////////
