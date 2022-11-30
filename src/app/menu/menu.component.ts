@@ -17,10 +17,10 @@ export class MenuComponent implements OnInit {
     this.nombreUsuario = "";
     this.nombreUsuario = localStorage.getItem('nombreUsuario');
     this.mydate = Date.now();
+
   }
 
   ngOnInit(): void {
-
 
     this.TokenService.token$.subscribe(
       (token: number) => {
@@ -28,6 +28,7 @@ export class MenuComponent implements OnInit {
       }
     )
 
+    setInterval(() => this.mydate = Date.now(), 1000)
   }
 
   public logout(): void {
